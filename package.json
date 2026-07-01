@@ -1,0 +1,12 @@
+{
+  "name": "vrsolucoesenergeticas-site",
+  "version": "1.0.0",
+  "description": "Site institucional da VR Soluções Energéticas",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["energia solar", "fotovoltaica", "vr solucoes"],
+  "license": "ISC"
+}

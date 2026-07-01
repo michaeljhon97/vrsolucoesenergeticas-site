@@ -1,0 +1,145 @@
+{
+  "version": "0.4",
+  "title": "Header - VR Solu\u00e7\u00f5es Energ\u00e9ticas",
+  "type": "header",
+  "content": [
+    {
+      "id": "h1e2a3d4",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "flex_align_items": "center",
+        "flex_justify_content": "center",
+        "background_background": "classic",
+        "background_color": "#0B1420",
+        "background_color_tablet": "#0B1420",
+        "background_color_mobile": "#0B1420",
+        "padding": { "unit": "px", "top": "0", "right": "24", "bottom": "0", "left": "24", "isLinked": false },
+        "padding_tablet": { "unit": "px", "top": "0", "right": "20", "bottom": "0", "left": "20", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "0", "right": "16", "bottom": "0", "left": "16", "isLinked": false },
+        "min_height": { "unit": "px", "size": 80 },
+        "min_height_tablet": { "unit": "px", "size": 64 },
+        "min_height_mobile": { "unit": "px", "size": 56 },
+        "position": "fixed",
+        "z_index": 100,
+        "width": { "unit": "%", "size": 100 }
+      },
+      "elements": [
+        {
+          "id": "h5e6a7d8",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "width": { "unit": "%", "size": 100, "max": 1280 },
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "flex_justify_content": "space-between",
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "h9e0a1b2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "gap": { "unit": "px", "column": "12", "row": "0", "isLinked": false },
+                "width": { "unit": "auto", "size": "" }
+              },
+              "elements": [
+                {
+                  "id": "c3d4e5f6",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "isInner": false,
+                  "settings": {
+                    "image": { "url": "https://placehold.co/48x48/162447/D4A843?text=VR", "id": "", "size": "", "alt": "VR Solu\u00e7\u00f5es Energ\u00e9ticas logo", "source": "external" },
+                    "width": { "unit": "px", "size": 48 },
+                    "width_tablet": { "unit": "px", "size": 40 },
+                    "width_mobile": { "unit": "px", "size": 36 },
+                    "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                    "image_size": "full",
+                    "hover_animation": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "g7h8i9j0",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<div style=\"line-height: 1.2;\"><strong style=\"font-family: Sora; font-weight: 700; color: #fff; font-size: 16px;\">VR Solu\u00e7\u00f5es</strong><br><span style=\"color: #D4A843; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;\">Energ\u00e9ticas</span></div>",
+                    "typography_typography": "custom"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "k1l2m3n4",
+              "elType": "widget",
+              "widgetType": "nav-menu",
+              "isInner": false,
+              "settings": {
+                "menu_items": [
+                  { "item_label": "Benef\u00edcios", "item_link": { "url": "#beneficios" }, "_id": "nav_b1" },
+                  { "item_label": "Servi\u00e7os", "item_link": { "url": "#servicos" }, "_id": "nav_b2" },
+                  { "item_label": "Projetos", "item_link": { "url": "#galeria" }, "_id": "nav_b3" },
+                  { "item_label": "Avalia\u00e7\u00f5es", "item_link": { "url": "#avaliacoes" }, "_id": "nav_b4" }
+                ],
+                "pointer": "none",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": { "unit": "px", "size": 14 },
+                "typography_font_weight": "500",
+                "text_color": "rgba(255,255,255,0.85)",
+                "text_color_hover": "#D4A843",
+                "active_color": "#D4A843",
+                "item_border_radius": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
+                "item_padding": { "unit": "px", "top": "8", "right": "16", "bottom": "8", "left": "16", "isLinked": false },
+                "toggle_align": "right",
+                "submenu_animation": "none",
+                "dropdown_typography_typography": "custom",
+                "dropdown_typography_font_family": "Inter",
+                "dropdown_typography_font_size": { "unit": "px", "size": 14 }
+              },
+              "elements": []
+            },
+            {
+              "id": "o5p6q7r8",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Simular agora",
+                "button_size": "sm",
+                "button_border_radius": { "unit": "px", "top": "100", "right": "100", "bottom": "100", "left": "100", "isLinked": true },
+                "button_text_color": "#0B1420",
+                "button_background_color": "#D4A843",
+                "button_hover_text_color": "#0B1420",
+                "button_hover_background_color": "#C8962E",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": { "unit": "px", "size": 14 },
+                "typography_font_weight": "700",
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": { "horizontal": 0, "vertical": 4, "blur": 16, "spread": -4, "color": "rgba(212,168,67,0.3)" },
+                "link": { "url": "#simulador" },
+                "padding": { "unit": "px", "top": "10", "right": "24", "bottom": "10", "left": "24", "isLinked": false },
+                "padding_tablet": { "unit": "px", "top": "8", "right": "20", "bottom": "8", "left": "20", "isLinked": false }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {},
+  "settings": {}
+}

@@ -1,0 +1,188 @@
+﻿{
+    "site":  "https://vrsolucoesenergeticas.com.br",
+    "description":  "Template Kit para empresa de energia solar",
+    "site-settings":  {
+                          "settings":  {
+
+                                       }
+                      },
+    "version":  "1.0.0",
+    "templates":  [
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1001,
+                          "type":  "page",
+                          "subtype":  "page",
+                          "author":  "VR Solucoes",
+                          "name":  "cta final",
+                          "path":  "vr-cta-final/",
+                          "export_date":  "2026-06-30",
+                          "title":  "cta final",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1002,
+                          "type":  "footer",
+                          "subtype":  "footer",
+                          "author":  "VR Solucoes",
+                          "name":  "footer",
+                          "path":  "vr-footer/",
+                          "export_date":  "2026-06-30",
+                          "title":  "footer",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1003,
+                          "type":  "page",
+                          "subtype":  "page",
+                          "author":  "VR Solucoes",
+                          "name":  "faq",
+                          "path":  "vr-faq/",
+                          "export_date":  "2026-06-30",
+                          "title":  "faq",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1004,
+                          "type":  "page",
+                          "subtype":  "page",
+                          "author":  "VR Solucoes",
+                          "name":  "galeria",
+                          "path":  "vr-galeria/",
+                          "export_date":  "2026-06-30",
+                          "title":  "galeria",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1005,
+                          "type":  "page",
+                          "subtype":  "page",
+                          "author":  "VR Solucoes",
+                          "name":  "servicos",
+                          "path":  "vr-servicos/",
+                          "export_date":  "2026-06-30",
+                          "title":  "servicos",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1006,
+                          "type":  "header",
+                          "subtype":  "header",
+                          "author":  "VR Solucoes",
+                          "name":  "header",
+                          "path":  "vr-header/",
+                          "export_date":  "2026-06-30",
+                          "title":  "header",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1007,
+                          "type":  "kit-styles",
+                          "subtype":  "kit-styles",
+                          "author":  "VR Solucoes",
+                          "name":  "global styles",
+                          "path":  "vr-global-styles/",
+                          "export_date":  "2026-06-30",
+                          "title":  "global styles",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1008,
+                          "type":  "page",
+                          "subtype":  "page",
+                          "author":  "VR Solucoes",
+                          "name":  "whatsapp float",
+                          "path":  "vr-whatsapp-float/",
+                          "export_date":  "2026-06-30",
+                          "title":  "whatsapp float",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1009,
+                          "type":  "page",
+                          "subtype":  "page",
+                          "author":  "VR Solucoes",
+                          "name":  "avaliacoes",
+                          "path":  "vr-avaliacoes/",
+                          "export_date":  "2026-06-30",
+                          "title":  "avaliacoes",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1010,
+                          "type":  "page",
+                          "subtype":  "page",
+                          "author":  "VR Solucoes",
+                          "name":  "hero",
+                          "path":  "vr-hero/",
+                          "export_date":  "2026-06-30",
+                          "title":  "hero",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1011,
+                          "type":  "page",
+                          "subtype":  "page",
+                          "author":  "VR Solucoes",
+                          "name":  "beneficios",
+                          "path":  "vr-beneficios/",
+                          "export_date":  "2026-06-30",
+                          "title":  "beneficios",
+                          "thumbnail":  ""
+                      },
+                      {
+                          "url":  "",
+                          "source":  "",
+                          "id":  1012,
+                          "type":  "page",
+                          "subtype":  "page",
+                          "author":  "VR Solucoes",
+                          "name":  "como funciona",
+                          "path":  "vr-como-funciona/",
+                          "export_date":  "2026-06-30",
+                          "title":  "como funciona",
+                          "thumbnail":  ""
+                      }
+                  ],
+    "author":  "VR Solucoes",
+    "created":  "2026-06-30",
+    "name":  "VR Solucoes Energeticas",
+    "elementor_version":  "3.0.0",
+    "plugins":  [
+                    {
+                        "name":  "Elementor",
+                        "pluginFile":  "elementor/elementor.php",
+                        "slug":  "elementor",
+                        "version":  "3.0.0"
+                    },
+                    {
+                        "name":  "Elementor Pro",
+                        "pluginFile":  "elementor-pro/elementor-pro.php",
+                        "slug":  "elementor-pro",
+                        "version":  "3.0.0"
+                    }
+                ],
+    "title":  "VR Solucoes Energeticas",
+    "thumbnail":  ""
+}

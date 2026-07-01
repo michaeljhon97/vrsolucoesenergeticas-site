@@ -1,0 +1,30 @@
+{
+  "name": "VR Solu\u00e7\u00f5es Energ\u00e9ticas",
+  "title": "VR Solu\u00e7\u00f5es Energ\u00e9ticas",
+  "slug": "vr-solucoes-energeticas",
+  "version": "1.0.0",
+  "description": "Template Kit completo para empresa de energia solar. Hero com simulador, beneficios, servicos, galeria, depoimentos, FAQ e CTA.",
+  "author": "VR Solu\u00e7\u00f5es Energ\u00e9ticas",
+  "authorURL": "https://vrsolucoesenergeticas.com.br",
+  "modified": "2026-06-30",
+  "thumbnail": "",
+  "site": "https://vrsolucoesenergeticas.com.br",
+  "templates": [
+    { "name": "Global Styles", "file": "templates/global-styles.json", "type": "kit-styles", "thumbnail": "" },
+    { "name": "Header", "file": "templates/header.json", "type": "header", "thumbnail": "" },
+    { "name": "Hero", "file": "templates/hero.json", "type": "page", "thumbnail": "" },
+    { "name": "Benef\u00edcios", "file": "templates/beneficios.json", "type": "page", "thumbnail": "" },
+    { "name": "Servi\u00e7os", "file": "templates/servicos.json", "type": "page", "thumbnail": "" },
+    { "name": "Galeria", "file": "templates/galeria.json", "type": "page", "thumbnail": "" },
+    { "name": "Avalia\u00e7\u00f5es", "file": "templates/avaliacoes.json", "type": "page", "thumbnail": "" },
+    { "name": "Como Funciona", "file": "templates/como-funciona.json", "type": "page", "thumbnail": "" },
+    { "name": "FAQ", "file": "templates/faq.json", "type": "page", "thumbnail": "" },
+    { "name": "CTA Final", "file": "templates/cta-final.json", "type": "page", "thumbnail": "" },
+    { "name": "Footer", "file": "templates/footer.json", "type": "footer", "thumbnail": "" },
+    { "name": "WhatsApp Float", "file": "templates/whatsapp-float.json", "type": "page", "thumbnail": "" }
+  ],
+  "requiredPlugins": [
+    { "name": "Elementor", "slug": "elementor", "source": "wordpress", "version": "3.0.0", "mainFile": "elementor/elementor.php" },
+    { "name": "Elementor Pro", "slug": "elementor-pro", "source": "wordpress", "version": "3.0.0", "mainFile": "elementor-pro/elementor-pro.php" }
+  ]
+}

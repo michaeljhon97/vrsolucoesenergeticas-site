@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VR Soluções Energéticas | Energia Solar Fotovoltaica</title>
+<meta name="description" content="Instalação de energia solar fotovoltaica residencial, comercial e rural. Simule sua economia em 30 segundos." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --navy-deep: #0B1420;
+  --navy: #162447;
+  --gold: #D4A843;
+  --gold-soft: #E8CC60;
+  --whatsapp: #25D366;
+  --bg: #f8f9fb;
+  --card: #ffffff;
+  --muted: #f0f2f5;
+  --muted-fg: #6b7280;
+  --input: #e2e5ea;
+  --accent: #e8eaee;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Sora', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: #1a1a2e;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+@media (min-width: 640px) { .container { padding: 0 1.5rem; } }
+
+/* HEADER */
+.header {
+  position: fixed; top: 0; inset-inline: 0; z-index: 40;
+  transition: background .3s, box-shadow .3s;
+}
+.header.scrolled { background: rgba(11,20,32,.95); backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,.3); }
+.header-inner {
+  height: 4rem; display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 1rem;
+}
+@media (min-width: 640px) { .header-inner { height: 5rem; } }
+.logo-link { display: flex; align-items: center; gap: .75rem; min-width: 0; }
+.logo-ring {
+  width: 2.5rem; height: 2.5rem; border-radius: .75rem; overflow: hidden;
+  box-shadow: 0 0 20px rgba(212,168,67,.25); flex-shrink: 0;
+  border: 2px solid rgba(212,168,67,.4);
+}
+@media (min-width: 640px) { .logo-ring { width: 3rem; height: 3rem; } }
+.logo-ring img { width: 100%; height: 100%; object-fit: cover; }
+.logo-text-1 { font-family: var(--font-display); font-weight: 700; color: #fff; font-size: .875rem; line-height: 1.2; }
+.logo-text-2 { color: var(--gold); font-size: .625rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+@media (min-width: 640px) {
+  .logo-text-1 { font-size: 1rem; }
+  .logo-text-2 { font-size: .75rem; }
+}
+.nav-desktop { display: none; }
+@media (min-width: 768px) {
+  .nav-desktop { display: flex; align-items: center; gap: 1.5rem; }
+}
+.nav-desktop a { color: rgba(255,255,255,.9); font-size: .875rem; transition: color .2s; }
+.nav-desktop a:hover { color: var(--gold); }
+.nav-cta {
+  padding: .5rem 1.25rem; border-radius: 9999px; background: var(--gold);
+  color: var(--navy-deep); font-weight: 700; font-size: .875rem;
+  box-shadow: 0 0 20px rgba(212,168,67,.3);
+}
+.nav-desktop a.nav-cta:hover { filter: brightness(1.1); color: var(--navy-deep) !important; }
+.nav-mobile-cta { display: inline-block; padding: .375rem .75rem; border-radius: 9999px; background: var(--gold); color: var(--navy-deep); font-size: .75rem; font-weight: 700; }
+@media (min-width: 768px) { .nav-mobile-cta { display: none; } }
+
+/* HERO */
+.hero {
+  padding-top: 6rem; padding-bottom: 4rem; background: var(--navy-deep); position: relative; overflow: hidden;
+}
+@media (min-width: 640px) { .hero { padding-top: 7rem; padding-bottom: 6rem; } }
+.hero-sun {
+  position: absolute; top: -8rem; right: -8rem; width: 480px; height: 480px;
+  border-radius: 50%; background: radial-gradient(circle, var(--gold), transparent 70%);
+  opacity: .15; filter: blur(64px); pointer-events: none;
+}
+.hero-glow {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at top, rgba(255,255,255,.06), transparent 60%);
+  pointer-events: none;
+}
+.hero-grid {
+  position: relative; display: grid; gap: 2.5rem; align-items: center;
+}
+@media (min-width: 1024px) { .hero-grid { grid-template-columns: 1.1fr 1fr; gap: 4rem; } }
+.hero-content { color: #fff; }
+.badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .25rem .75rem; border-radius: 9999px;
+  background: rgba(255,255,255,.1); backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,.2); font-size: .75rem; font-weight: 500;
+}
+.badge-dot { width: .5rem; height: .5rem; border-radius: 50%; background: var(--gold); }
+.badge-dot.pulse { animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+.hero h1 {
+  margin-top: 1.25rem; font-family: var(--font-display); font-weight: 800;
+  font-size: 2.25rem; line-height: 1.05;
+}
+@media (min-width: 640px) { .hero h1 { font-size: 3rem; } }
+@media (min-width: 1024px) { .hero h1 { font-size: 3.75rem; } }
+.hero h1 span { color: var(--gold); }
+.hero p {
+  margin-top: 1.25rem; font-size: 1rem; color: rgba(255,255,255,.8); max-width: 36rem;
+}
+@media (min-width: 640px) { .hero p { font-size: 1.125rem; } }
+.stats { margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 1rem; font-size: .875rem; }
+.stat-value { font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; color: var(--gold); }
+.stat-label { color: rgba(255,255,255,.7); }
+.hero-img-desktop { display: none; }
+@media (min-width: 1024px) { .hero-img-desktop { display: block; margin-top: 2rem; } }
+.hero-img-desktop img, .hero-img-mobile img {
+  border-radius: 1rem; box-shadow: 0 0 30px rgba(212,168,67,.2);
+  border: 1px solid rgba(255,255,255,.1); width: 100%;
+}
+.hero-img-mobile { margin-top: 2.5rem; padding: 0 1rem; }
+@media (min-width: 1024px) { .hero-img-mobile { display: none; } }
+.hero-img-mobile .container { padding: 0; }
+
+/* SIMULADOR */
+.simulador {
+  background: #fff; border-radius: 1.5rem; padding: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,.15); border: 1px solid rgba(0,0,0,.05);
+  scroll-margin-top: 6rem;
+}
+@media (min-width: 640px) { .simulador { padding: 2rem; } }
+.simulador-eyebrow {
+  display: flex; align-items: center; gap: .5rem;
+  font-size: .75rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: .05em;
+}
+.simulador-eyebrow .dot { width: .5rem; height: .5rem; border-radius: 50%; background: var(--gold); }
+.simulador h2 { margin-top: .5rem; font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--navy-deep); }
+@media (min-width: 640px) { .simulador h2 { font-size: 1.875rem; } }
+.simulador > p { font-size: .875rem; color: var(--muted-fg); margin-top: .25rem; }
+.form-group { margin-top: 1.5rem; }
+.form-group > label { font-size: .75rem; font-weight: 700; color: var(--navy-deep); text-transform: uppercase; letter-spacing: .03em; }
+.tipo-grid { margin-top: .5rem; display: grid; grid-template-columns: repeat(3,1fr); gap: .5rem; }
+.tipo-btn {
+  padding: .625rem .75rem; border-radius: .75rem; font-size: .875rem; font-weight: 500;
+  border: none; cursor: pointer; transition: all .15s; text-transform: capitalize;
+  background: var(--muted); color: var(--navy-deep);
+}
+.tipo-btn:hover { background: var(--accent); }
+.tipo-btn.active { background: var(--navy); color: #fff; box-shadow: 0 2px 8px rgba(22,36,71,.3); }
+.range-group { margin-top: 1.25rem; }
+.range-header { display: flex; justify-content: space-between; align-items: center; }
+.range-header label { font-size: .75rem; font-weight: 700; color: var(--navy-deep); text-transform: uppercase; letter-spacing: .03em; }
+.range-value { font-size: 1rem; font-weight: 700; color: var(--gold); }
+.range-input {
+  margin-top: .75rem; width: 100%; height: 6px; appearance: none;
+  background: var(--input); border-radius: 3px; outline: none;
+}
+.range-input::-webkit-slider-thumb {
+  appearance: none; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--gold); cursor: pointer; box-shadow: 0 2px 6px rgba(212,168,67,.4);
+}
+.range-input::-moz-range-thumb {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--gold); cursor: pointer; border: none;
+}
+.range-labels { display: flex; justify-content: space-between; font-size: .625rem; color: var(--muted-fg); margin-top: .25rem; }
+.economia-box {
+  margin-top: 1.25rem; padding: 1.25rem; border-radius: 1rem;
+  background: linear-gradient(135deg, var(--navy-deep), var(--navy)); color: #fff;
+}
+.economia-box .label { font-size: .75rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: .05em; }
+.economia-valor {
+  margin-top: .25rem; display: flex; align-items: baseline; gap: .5rem;
+}
+.economia-valor .numero { font-family: var(--font-display); font-size: 1.875rem; font-weight: 800; }
+@media (min-width: 640px) { .economia-valor .numero { font-size: 2.25rem; } }
+.economia-valor .periodo { color: rgba(255,255,255,.7); font-size: .875rem; }
+.economia-detalhe { margin-top: .25rem; font-size: .875rem; color: rgba(255,255,255,.8); }
+.input-grid { margin-top: 1.25rem; display: grid; gap: .75rem; }
+@media (min-width: 640px) { .input-grid { grid-template-columns: 1fr 1fr; } }
+.input-group { display: flex; flex-direction: column; }
+.input-group label { font-size: .75rem; font-weight: 700; color: var(--navy-deep); text-transform: uppercase; letter-spacing: .03em; }
+.input-group input {
+  margin-top: .375rem; padding: .625rem 1rem; border-radius: .75rem;
+  border: 1px solid var(--input); background: #fff; font-size: .875rem;
+  outline: none; transition: box-shadow .2s;
+}
+.input-group input:focus { box-shadow: 0 0 0 2px var(--gold); }
+.btn-submit {
+  margin-top: 1.25rem; width: 100%; padding: .875rem; border-radius: .75rem;
+  background: var(--gold); color: var(--navy-deep); font-weight: 700; font-size: 1rem;
+  border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: .5rem;
+  box-shadow: 0 0 20px rgba(212,168,67,.3); transition: filter .2s, transform .1s;
+}
+.btn-submit:hover { filter: brightness(1.05); }
+.btn-submit:active { transform: scale(.99); }
+.btn-submit svg { width: 1.25rem; height: 1.25rem; }
+.lgpd-note { margin-top: .75rem; font-size: .6875rem; color: var(--muted-fg); text-align: center; }
+
+/* SECTION COMMON */
+section { padding: 4rem 0; }
+@media (min-width: 640px) { section { padding: 6rem 0; } }
+.section-header { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: end; gap: 1rem; }
+.eyebrow { color: var(--gold); font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; }
+.section-title { margin-top: .5rem; font-family: var(--font-display); font-size: 1.875rem; font-weight: 800; color: var(--navy-deep); line-height: 1.2; }
+@media (min-width: 640px) { .section-title { font-size: 2.25rem; } }
+.section-right { display: none; }
+@media (min-width: 640px) { .section-right { display: block; } }
+.bg-muted { background: var(--muted); }
+
+/* BENEFICIOS */
+.beneficios-grid { margin-top: 2.5rem; display: grid; gap: 1.25rem; }
+@media (min-width: 640px) { .beneficios-grid { grid-template-columns: repeat(2,1fr); } }
+@media (min-width: 1024px) { .beneficios-grid { grid-template-columns: repeat(4,1fr); } }
+.card { padding: 1.5rem; border-radius: 1rem; background: var(--card); box-shadow: 0 2px 12px rgba(0,0,0,.06); border: 1px solid rgba(0,0,0,.05); transition: transform .2s; }
+.card:hover { transform: translateY(-.25rem); }
+.card-icon { font-size: 2rem; }
+.card h3 { margin-top: .75rem; font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; color: var(--navy-deep); }
+.card p { margin-top: .25rem; font-size: .875rem; color: var(--muted-fg); }
+
+/* SERVICOS */
+.servicos-grid { margin-top: 2.5rem; display: grid; gap: 1.5rem; }
+@media (min-width: 768px) { .servicos-grid { grid-template-columns: repeat(3,1fr); } }
+.artigo { border-radius: 1.5rem; overflow: hidden; background: var(--card); box-shadow: 0 2px 12px rgba(0,0,0,.06); border: 1px solid rgba(0,0,0,.05); }
+.artigo-img { aspect-ratio: 4/3; overflow: hidden; }
+.artigo-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.artigo:hover .artigo-img img { transform: scale(1.05); }
+.artigo-body { padding: 1.5rem; }
+.artigo-body h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--navy-deep); }
+.artigo-body p { margin-top: .375rem; font-size: .875rem; color: var(--muted-fg); }
+.artigo-link { margin-top: 1rem; display: inline-flex; align-items: center; gap: .25rem; font-size: .875rem; font-weight: 600; color: var(--navy); transition: color .2s; }
+.artigo-link:hover { color: var(--gold); }
+
+/* GALERIA */
+.galeria-grid { margin-top: 2.5rem; display: grid; grid-template-columns: repeat(2,1fr); gap: .75rem; }
+@media (min-width: 768px) { .galeria-grid { grid-template-columns: repeat(3,1fr); gap: 1rem; } }
+.galeria-item { overflow: hidden; border-radius: 1rem; border: 1px solid rgba(0,0,0,.05); box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+.galeria-item img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1/1; transition: transform .5s; }
+.galeria-item:hover img { transform: scale(1.05); }
+@media (min-width: 768px) {
+  .galeria-item.span-2 { grid-column: span 2; }
+}
+
+/* AVALIACOES */
+.avaliacoes-grid { margin-top: 2.5rem; display: grid; gap: 1.25rem; }
+@media (min-width: 640px) { .avaliacoes-grid { grid-template-columns: repeat(2,1fr); } }
+@media (min-width: 1024px) { .avaliacoes-grid { grid-template-columns: repeat(4,1fr); } }
+.avaliacao { padding: 1.5rem; border-radius: 1rem; background: var(--card); box-shadow: 0 2px 12px rgba(0,0,0,.06); border: 1px solid rgba(0,0,0,.05); }
+.estrelas { font-size: 1.125rem; color: var(--gold); }
+.avaliacao-texto { margin-top: .75rem; font-size: .875rem; line-height: 1.6; color: rgba(26,26,46,.8); }
+.avaliacao-autor { margin-top: 1rem; display: flex; align-items: center; gap: .75rem; }
+.avatar { width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--navy); color: var(--gold); display: grid; place-items: center; font-weight: 700; font-size: .75rem; flex-shrink: 0; }
+.avaliacao-autor .nome { font-size: .875rem; font-weight: 600; color: var(--navy-deep); }
+.avaliacao-autor .verified { font-size: .75rem; color: var(--muted-fg); }
+.review-badge { display: flex; align-items: center; gap: .5rem; font-size: .875rem; }
+.review-badge .score { font-weight: 700; color: var(--navy-deep); }
+.review-badge .stars { color: var(--gold); }
+.review-badge .label { color: var(--muted-fg); }
+.review-badge svg { width: 1.25rem; height: 1.25rem; }
+
+/* COMO FUNCIONA */
+.passos-grid { margin-top: 2.5rem; display: grid; gap: 1.25rem; }
+@media (min-width: 640px) { .passos-grid { grid-template-columns: repeat(2,1fr); } }
+@media (min-width: 1024px) { .passos-grid { grid-template-columns: repeat(4,1fr); } }
+.passo {
+  position: relative; padding: 1.5rem; border-radius: 1rem;
+  background: linear-gradient(135deg, var(--navy-deep), var(--navy)); color: #fff;
+  overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.1);
+}
+.passo-numero { position: absolute; top: -1rem; right: -1rem; font-family: var(--font-display); font-weight: 800; font-size: 4.5rem; color: rgba(212,168,67,.15); line-height: 1; }
+.passo-label { position: relative; font-size: .75rem; font-weight: 700; color: var(--gold); letter-spacing: .1em; }
+.passo h3 { position: relative; margin-top: .5rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; }
+.passo p { position: relative; margin-top: .375rem; font-size: .875rem; color: rgba(255,255,255,.75); }
+
+/* FAQ */
+.faq-container { margin: 0 auto; max-width: 48rem; }
+@media (min-width: 640px) { .faq-container { max-width: 48rem; } }
+.faq-list { margin-top: 2rem; display: flex; flex-direction: column; gap: .75rem; }
+.faq-item { border-radius: 1rem; background: var(--card); border: 1px solid rgba(0,0,0,.05); box-shadow: 0 2px 12px rgba(0,0,0,.06); overflow: hidden; }
+.faq-btn { width: 100%; padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; border: none; background: none; cursor: pointer; text-align: left; font-size: .875rem; font-weight: 600; color: var(--navy-deep); }
+.faq-icon { font-size: 1.25rem; color: var(--gold); transition: transform .2s; }
+.faq-icon.open { transform: rotate(45deg); }
+.faq-answer { padding: 0 1.25rem 1rem; font-size: .875rem; color: var(--muted-fg); }
+
+/* CTA FINAL */
+.instagram-section {
+  padding: 4rem 0; text-align: center; background: var(--bg);
+}
+.instagram-section h2 {
+  font-family: var(--font-display); font-size: 1.75rem; font-weight: 800;
+}
+.instagram-section h2 span { color: var(--gold); }
+.instagram-section p { margin-top: .5rem; color: var(--text-light); margin-bottom: 2rem; }
+.instagram-section .sk-instagram-feed { max-width: 800px; margin: 0 auto; }
+
+.cta-final {
+  padding: 5rem 0; background: var(--navy-deep); position: relative; overflow: hidden;
+}
+.cta-sun {
+  position: absolute; bottom: -8rem; left: -8rem; width: 400px; height: 400px;
+  border-radius: 50%; background: radial-gradient(circle, var(--gold), transparent 70%);
+  opacity: .15; filter: blur(64px); pointer-events: none;
+}
+.cta-content { position: relative; text-align: center; color: #fff; max-width: 48rem; margin: 0 auto; }
+.cta-content h2 {
+  font-family: var(--font-display); font-size: 1.875rem; font-weight: 800;
+}
+@media (min-width: 640px) { .cta-content h2 { font-size: 3rem; } }
+.cta-content h2 span { color: var(--gold); }
+.cta-content p { margin-top: 1rem; color: rgba(255,255,255,.8); }
+.cta-btns { margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+.btn-whatsapp {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .875rem 1.5rem; border-radius: 9999px; background: var(--gold);
+  color: var(--navy-deep); font-weight: 700; box-shadow: 0 0 20px rgba(212,168,67,.3);
+  transition: filter .2s; font-size: .875rem;
+}
+.btn-whatsapp:hover { filter: brightness(1.1); color: var(--navy-deep); }
+.btn-whatsapp svg { width: 1.25rem; height: 1.25rem; }
+.btn-outline {
+  display: inline-flex; align-items: center;
+  padding: .875rem 1.5rem; border-radius: 9999px;
+  background: rgba(255,255,255,.1); backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,.3); color: #fff; font-weight: 600;
+  transition: background .2s; font-size: .875rem;
+}
+.btn-outline:hover { background: rgba(255,255,255,.2); }
+
+/* FOOTER */
+.footer { background: var(--navy-deep); color: rgba(255,255,255,.8); }
+.footer-main { max-width: 1280px; margin: 0 auto; padding: 3.5rem 1rem; display: grid; gap: 2rem; }
+@media (min-width: 640px) { .footer-main { padding: 3.5rem 1.5rem; } }
+@media (min-width: 768px) { .footer-main { grid-template-columns: 2fr 1fr 1fr; } }
+.footer-brand .logo-row { display: flex; align-items: center; gap: .75rem; }
+.footer-brand .logo-row .ring {
+  width: 3rem; height: 3rem; border-radius: .75rem; overflow: hidden;
+  border: 2px solid rgba(212,168,67,.4); flex-shrink: 0;
+}
+.footer-brand .logo-row .ring img { width: 100%; height: 100%; object-fit: cover; }
+.footer-brand .logo-row .text-1 { font-family: var(--font-display); font-weight: 700; color: #fff; }
+.footer-brand .logo-row .text-2 { color: var(--gold); font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; }
+.footer-brand p { margin-top: 1rem; font-size: .875rem; max-width: 24rem; }
+.footer-col h4 { color: var(--gold); font-size: .875rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.footer-col ul { margin-top: 1rem; list-style: none; display: flex; flex-direction: column; gap: .5rem; font-size: .875rem; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bar {
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.footer-bar-inner {
+  max-width: 1280px; margin: 0 auto; padding: 1.25rem 1rem;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem;
+  font-size: .75rem; color: rgba(255,255,255,.5);
+}
+@media (min-width: 640px) { .footer-bar-inner { padding: 1.25rem 1.5rem; } }
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 50; display: block;
+}
+.whatsapp-float .ping {
+  position: absolute; inset: 0; border-radius: 50%; background: var(--whatsapp);
+  animation: ping 2s infinite; opacity: .3;
+}
+@keyframes ping { 0% { transform: scale(1); opacity: .3; } 70% { transform: scale(1.5); opacity: 0; } 100% { transform: scale(1.5); opacity: 0; } }
+.whatsapp-float .btn-wa {
+  position: relative; width: 3.5rem; height: 3.5rem; border-radius: 50%;
+  background: var(--whatsapp); color: #fff; display: grid; place-items: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.4); transition: transform .2s;
+}
+@media (min-width: 640px) { .whatsapp-float .btn-wa { width: 4rem; height: 4rem; } }
+.whatsapp-float .btn-wa:hover { transform: scale(1.1); }
+.whatsapp-float .btn-wa svg { width: 1.75rem; height: 1.75rem; }
+@media (min-width: 640px) { .whatsapp-float .btn-wa svg { width: 2rem; height: 2rem; } }
+
+/* LGPD BANNER */
+.lgpd-banner {
+  position: fixed; bottom: 0; inset-inline: 0; z-index: 40; padding: .75rem;
+  display: none;
+}
+.lgpd-banner.visible { display: block; }
+.lgpd-inner {
+  max-width: 56rem; margin: 0 auto;
+  background: var(--navy-deep); color: #fff; border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(212,168,67,.2);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 1rem; display: flex; flex-direction: column; gap: .75rem;
+}
+@media (min-width: 640px) {
+  .lgpd-inner { flex-direction: row; align-items: center; padding: 1.25rem; }
+}
+.lgpd-inner p { font-size: .75rem; color: rgba(255,255,255,.8); flex: 1; }
+@media (min-width: 640px) { .lgpd-inner p { font-size: .875rem; } }
+.lgpd-inner strong { color: var(--gold); }
+.lgpd-btns { display: flex; gap: .5rem; flex-shrink: 0; }
+.lgpd-btn-recuse {
+  padding: .5rem 1rem; border-radius: 9999px; font-size: .75rem; font-weight: 500;
+  background: rgba(255,255,255,.1); color: #fff; border: none; cursor: pointer; transition: background .2s;
+}
+.lgpd-btn-recuse:hover { background: rgba(255,255,255,.2); }
+.lgpd-btn-accept {
+  padding: .5rem 1rem; border-radius: 9999px; font-size: .75rem; font-weight: 700;
+  background: var(--gold); color: var(--navy-deep); border: none; cursor: pointer; transition: filter .2s;
+}
+.lgpd-btn-accept:hover { filter: brightness(1.1); }
+
+/* scroll-margin for anchor offsets */
+[id] { scroll-margin-top: 5rem; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="logo-link">
+      <div class="logo-ring">
+        <img src="https://demo-vr.lovable.app/__l5e/assets-v1/5b02f80f-94c4-444b-94bc-8d50c74d035a/vr-logo.jpeg" alt="VR Soluções Energéticas logo" width="48" height="48" />
+      </div>
+      <div>
+        <div class="logo-text-1">VR Soluções</div>
+        <div class="logo-text-2">Energéticas</div>
+      </div>
+    </a>
+    <nav class="nav-desktop">
+      <a href="#beneficios">Benefícios</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Projetos</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#simulador" class="nav-cta">Simular agora</a>
+    </nav>
+    <a href="#simulador" class="nav-mobile-cta">Simular</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="hero-sun"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="badge">
+        <span class="badge-dot pulse"></span>
+        Atendemos todo o Brasil
+      </span>
+      <h1>Reduza até <span>95%</span> da sua conta de luz com energia solar.</h1>
+      <p>Simule grátis em 30 segundos e receba uma proposta personalizada direto no seu WhatsApp. Projeto, instalação e homologação com garantia.</p>
+      <div class="stats">
+        <div><span class="stat-value">+500</span> <span class="stat-label">instalações</span></div>
+        <div><span class="stat-value">25 anos</span> <span class="stat-label">de garantia</span></div>
+        <div><span class="stat-value">4.9★</span> <span class="stat-label">no Google</span></div>
+      </div>
+      <div class="hero-img-desktop">
+        <img src="https://demo-vr.lovable.app/assets/hero-solar-CD5CcqkT.jpg" alt="Casa moderna com painéis solares ao pôr do sol" width="1920" height="1080" />
+      </div>
+    </div>
+    <div>
+      <!-- SIMULADOR -->
+      <form class="simulador" id="simulador" onsubmit="enviarWhatsApp(event)">
+        <div class="simulador-eyebrow"><span class="dot"></span> Simulador grátis</div>
+        <h2>Descubra sua economia</h2>
+        <p>Preencha em 30 segundos e receba sua proposta no WhatsApp.</p>
+
+        <div class="form-group">
+          <label>Tipo de imóvel</label>
+          <div class="tipo-grid">
+            <button type="button" class="tipo-btn active" data-tipo="residencial" onclick="setTipo(this)">Residencial</button>
+            <button type="button" class="tipo-btn" data-tipo="comercial" onclick="setTipo(this)">Comercial</button>
+            <button type="button" class="tipo-btn" data-tipo="rural" onclick="setTipo(this)">Rural</button>
+          </div>
+        </div>
+
+        <div class="range-group">
+          <div class="range-header">
+            <label>Conta de luz média mensal</label>
+            <span class="range-value" id="contaValue">R$ 500</span>
+          </div>
+          <input type="range" class="range-input" id="contaRange" min="100" max="5000" step="50" value="500" oninput="atualizarConta(this.value)" />
+          <div class="range-labels"><span>R$ 100</span><span>R$ 5.000</span></div>
+        </div>
+
+        <div class="economia-box">
+          <div class="label">Sua economia estimada</div>
+          <div class="economia-valor">
+            <span class="numero" id="economiaMensal">R$ 450</span>
+            <span class="periodo">/mês</span>
+          </div>
+          <div class="economia-detalhe" id="economiaDetalhe">R$ 5.400/ano · sistema de ~3.8 kWp</div>
+        </div>
+
+        <div class="input-grid">
+          <div class="input-group">
+            <label>Nome</label>
+            <input type="text" id="nome" required placeholder="Seu nome" />
+          </div>
+          <div class="input-group">
+            <label>WhatsApp</label>
+            <input type="tel" id="telefone" required placeholder="(19) 99999-9999" />
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Cidade / UF</label>
+          <input type="text" id="cidade" required placeholder="Campinas / SP" />
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.03 0C5.4 0 .03 5.37.03 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0 0 12.03 24C18.66 24 24 18.63 24 12c0-3.2-1.25-6.21-3.48-8.52ZM12.03 21.8c-1.86 0-3.69-.5-5.29-1.45l-.38-.22-3.67.96.98-3.58-.25-.37A9.78 9.78 0 0 1 2.23 12c0-5.4 4.4-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.87a9.74 9.74 0 0 1 2.87 6.93c0 5.4-4.4 9.8-9.8 9.8Zm5.37-7.34c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.12 4.52.72.31 1.28.5 1.71.64.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z"/></svg>
+          Receber proposta no WhatsApp
+        </button>
+        <p class="lgpd-note">Ao enviar você concorda em ser contatado pela VR Soluções Energéticas conforme a LGPD.</p>
+      </form>
+    </div>
+  </div>
+  <div class="hero-img-mobile">
+    <div class="container">
+      <img src="https://demo-vr.lovable.app/assets/hero-solar-CD5CcqkT.jpg" alt="Casa com painéis solares" width="1920" height="1080" />
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section id="beneficios">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="eyebrow">Por que solar</div>
+        <h2 class="section-title">Vantagens que pagam o sistema sozinho</h2>
+      </div>
+    </div>
+    <div class="beneficios-grid">
+      <div class="card"><div class="card-icon">💰</div><h3>Economia imediata</h3><p>Reduza até 95% da conta de luz já no primeiro mês.</p></div>
+      <div class="card"><div class="card-icon">🛡️</div><h3>25 anos de garantia</h3><p>Painéis de primeira linha com garantia de fabricante.</p></div>
+      <div class="card"><div class="card-icon">🌱</div><h3>Energia limpa</h3><p>Sustentabilidade real e valorização do seu imóvel.</p></div>
+      <div class="card"><div class="card-icon">⚡</div><h3>Instalação rápida</h3><p>Projeto, instalação e homologação em até 30 dias.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICOS -->
+<section id="servicos" class="bg-muted">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="eyebrow">Nossos serviços</div>
+        <h2 class="section-title">Soluções completas em energia solar</h2>
+      </div>
+    </div>
+    <div class="servicos-grid">
+      <article class="artigo">
+        <div class="artigo-img"><img src="https://demo-vr.lovable.app/assets/install-3-DaNFCJJT.jpg" alt="Residencial" loading="lazy" width="1024" height="768" /></div>
+        <div class="artigo-body">
+          <h3>Residencial</h3>
+          <p>Sistemas fotovoltaicos para casas e condomínios.</p>
+          <a href="#simulador" class="artigo-link">Simular este projeto →</a>
+        </div>
+      </article>
+      <article class="artigo">
+        <div class="artigo-img"><img src="https://demo-vr.lovable.app/assets/install-4-mBt0k0WH.jpg" alt="Comercial &amp; Industrial" loading="lazy" width="1024" height="768" /></div>
+        <div class="artigo-body">
+          <h3>Comercial &amp; Industrial</h3>
+          <p>Projetos sob medida para empresas e indústrias.</p>
+          <a href="#simulador" class="artigo-link">Simular este projeto →</a>
+        </div>
+      </article>
+      <article class="artigo">
+        <div class="artigo-img"><img src="https://demo-vr.lovable.app/assets/install-1-DmlhnhlA.jpg" alt="Rural" loading="lazy" width="1024" height="768" /></div>
+        <div class="artigo-body">
+          <h3>Rural</h3>
+          <p>Energia solar para fazendas, sítios e agroindústria.</p>
+          <a href="#simulador" class="artigo-link">Simular este projeto →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="eyebrow">Projetos entregues</div>
+        <h2 class="section-title">Instalações realizadas para nossos clientes</h2>
+      </div>
+    </div>
+    <div class="galeria-grid">
+      <div class="galeria-item span-2"><img src="https://demo-vr.lovable.app/assets/install-1-DmlhnhlA.jpg" alt="Instalação solar 1" loading="lazy" width="1024" height="1024" /></div>
+      <div class="galeria-item"><img src="https://demo-vr.lovable.app/assets/install-2-DC6SLXhl.jpg" alt="Instalação solar 2" loading="lazy" width="1024" height="1024" /></div>
+      <div class="galeria-item"><img src="https://demo-vr.lovable.app/assets/install-3-DaNFCJJT.jpg" alt="Instalação solar 3" loading="lazy" width="1024" height="1024" /></div>
+      <div class="galeria-item"><img src="https://demo-vr.lovable.app/assets/install-4-mBt0k0WH.jpg" alt="Instalação solar 4" loading="lazy" width="1024" height="1024" /></div>
+      <div class="galeria-item span-2"><img src="https://demo-vr.lovable.app/assets/install-1-DmlhnhlA.jpg" alt="Instalação solar 5" loading="lazy" width="1024" height="1024" /></div>
+      <div class="galeria-item"><img src="https://demo-vr.lovable.app/assets/install-4-mBt0k0WH.jpg" alt="Instalação solar 6" loading="lazy" width="1024" height="1024" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- AVALIACOES -->
+<section id="avaliacoes" class="bg-muted">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="eyebrow">Avaliações</div>
+        <h2 class="section-title">O que dizem nossos clientes</h2>
+      </div>
+      <div class="section-right">
+        <div class="review-badge">
+          <svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.8 1.1 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 13 24 13c3 0 5.8 1.1 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.4 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2C40.9 35.6 44 30.3 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+          <span class="score">4.9</span>
+          <span class="stars">★★★★★</span>
+          <span class="label">no Google</span>
+        </div>
+      </div>
+    </div>
+    <div class="avaliacoes-grid">
+      <div class="avaliacao">
+        <div class="estrelas">★★★★★</div>
+        <p class="avaliacao-texto">"Equipe extremamente profissional. Minha conta caiu de R$ 850 para R$ 90. Recomendo!"</p>
+        <div class="avaliacao-autor">
+          <div class="avatar">CP</div>
+          <div><div class="nome">Carlos Pereira</div><div class="verified">Cliente verificado</div></div>
+        </div>
+      </div>
+      <div class="avaliacao">
+        <div class="estrelas">★★★★★</div>
+        <p class="avaliacao-texto">"Instalação rápida e atendimento impecável. Já indiquei para vários amigos."</p>
+        <div class="avaliacao-autor">
+          <div class="avatar">JM</div>
+          <div><div class="nome">Juliana Martins</div><div class="verified">Cliente verificado</div></div>
+        </div>
+      </div>
+      <div class="avaliacao">
+        <div class="estrelas">★★★★★</div>
+        <p class="avaliacao-texto">"Melhor investimento que fiz. Projeto bem feito e suporte pós-venda excelente."</p>
+        <div class="avaliacao-autor">
+          <div class="avatar">MA</div>
+          <div><div class="nome">Marcos Andrade</div><div class="verified">Cliente verificado</div></div>
+        </div>
+      </div>
+      <div class="avaliacao">
+        <div class="estrelas">★★★★★</div>
+        <p class="avaliacao-texto">"Tiraram todas as minhas dúvidas e a economia é real desde o primeiro mês."</p>
+        <div class="avaliacao-autor">
+          <div class="avatar">RS</div>
+          <div><div class="nome">Renata Souza</div><div class="verified">Cliente verificado</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="eyebrow">Processo simples</div>
+        <h2 class="section-title">Como funciona em 4 passos</h2>
+      </div>
+    </div>
+    <div class="passos-grid">
+      <div class="passo">
+        <div class="passo-numero">01</div>
+        <div class="passo-label">PASSO 01</div>
+        <h3>Simulação</h3>
+        <p>Você preenche o simulador e recebe uma estimativa de economia.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-numero">02</div>
+        <div class="passo-label">PASSO 02</div>
+        <h3>Visita técnica</h3>
+        <p>Nosso engenheiro avalia seu imóvel e elabora o projeto ideal.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-numero">03</div>
+        <div class="passo-label">PASSO 03</div>
+        <h3>Instalação</h3>
+        <p>Equipamentos de ponta instalados com segurança e agilidade.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-numero">04</div>
+        <div class="passo-label">PASSO 04</div>
+        <h3>Economia</h3>
+        <p>Sistema homologado e funcionando — economia garantida.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-muted">
+  <div class="container faq-container">
+    <div class="section-header">
+      <div>
+        <div class="eyebrow">Dúvidas frequentes</div>
+        <h2 class="section-title">Tudo o que você precisa saber</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">Quanto custa instalar energia solar?<span class="faq-icon open">+</span></button>
+        <div class="faq-answer">O valor depende do consumo do seu imóvel. No simulador você recebe uma estimativa personalizada em 30 segundos.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">Em quanto tempo o investimento se paga?<span class="faq-icon">+</span></button>
+        <div class="faq-answer" style="display:none">Em média, o retorno acontece entre 3 e 5 anos. Depois disso, é economia pura por mais de 20 anos.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">A instalação danifica meu telhado?<span class="faq-icon">+</span></button>
+        <div class="faq-answer" style="display:none">Não. Utilizamos estruturas próprias e nossa equipe técnica garante a integridade da sua cobertura.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">Funciona em dias nublados ou chuvosos?<span class="faq-icon">+</span></button>
+        <div class="faq-answer" style="display:none">Sim. O sistema continua gerando energia, com produção reduzida. O excedente é compensado pela rede.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">Vocês cuidam da homologação na concessionária?<span class="faq-icon">+</span></button>
+        <div class="faq-answer" style="display:none">Sim, fazemos todo o processo: projeto, instalação, homologação e suporte pós-venda.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- INSTAGRAM -->
+<section class="instagram-section">
+  <div class="container">
+    <h2>Siga-nos no <span>Instagram</span></h2>
+    <p>Acompanhe nossos projetos e novidades.</p>
+    <div class="sk-instagram-feed" data-embed-id="25693814"></div>
+    <script src="https://widgets.sociablekit.com/instagram-feed/widget.js" defer></script>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-sun"></div>
+  <div class="container">
+    <div class="cta-content">
+      <h2>Pronto para <span>parar de pagar caro</span> na conta de luz?</h2>
+      <p>Fale agora com um especialista e receba uma proposta sem compromisso.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/5515988294431?text=Ol%C3%A1!%20Quero%20uma%20proposta%20de%20energia%20solar." target="_blank" rel="noopener" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.03 0C5.4 0 .03 5.37.03 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0 0 12.03 24C18.66 24 24 18.63 24 12c0-3.2-1.25-6.21-3.48-8.52ZM12.03 21.8c-1.86 0-3.69-.5-5.29-1.45l-.38-.22-3.67.96.98-3.58-.25-.37A9.78 9.78 0 0 1 2.23 12c0-5.4 4.4-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.87a9.74 9.74 0 0 1 2.87 6.93c0 5.4-4.4 9.8-9.8 9.8Zm5.37-7.34c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.12 4.52.72.31 1.28.5 1.71.64.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a href="#simulador" class="btn-outline">Fazer simulação</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="logo-row">
+        <div class="ring">
+          <img src="https://demo-vr.lovable.app/__l5e/assets-v1/5b02f80f-94c4-444b-94bc-8d50c74d035a/vr-logo.jpeg" alt="VR Soluções Energéticas logo" width="48" height="48" />
+        </div>
+        <div>
+          <div class="text-1">VR Soluções</div>
+          <div class="text-2">Energéticas</div>
+        </div>
+      </div>
+      <p>Especialistas em energia solar fotovoltaica. Projeto, instalação e homologação com garantia para residências, empresas e propriedades rurais.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Projetos</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5515988294431" target="_blank" rel="noopener">WhatsApp: (15) 98829-4431</a></li>
+        <li><a href="https://www.instagram.com/vrsolucoesenergeticas" target="_blank" rel="noopener">@vrsolucoesenergeticas</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <div class="footer-bar-inner">
+      <span>&copy; 2026 VR Soluções Energéticas. Todos os direitos reservados.</span>
+      <span>CNPJ em conformidade &middot; LGPD</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5515988294431?text=Ol%C3%A1!%20Quero%20uma%20proposta%20de%20energia%20solar." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
+  <span class="ping"></span>
+  <span class="btn-wa">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.03 0C5.4 0 .03 5.37.03 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0 0 12.03 24C18.66 24 24 18.63 24 12c0-3.2-1.25-6.21-3.48-8.52ZM12.03 21.8c-1.86 0-3.69-.5-5.29-1.45l-.38-.22-3.67.96.98-3.58-.25-.37A9.78 9.78 0 0 1 2.23 12c0-5.4 4.4-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.87a9.74 9.74 0 0 1 2.87 6.93c0 5.4-4.4 9.8-9.8 9.8Zm5.37-7.34c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.12 4.52.72.31 1.28.5 1.71.64.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z"/></svg>
+  </span>
+</a>
+
+<!-- LGPD BANNER -->
+<div class="lgpd-banner" id="lgpd">
+  <div class="lgpd-inner">
+    <p>🍪 Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa política de privacidade conforme a <strong>LGPD</strong>.</p>
+    <div class="lgpd-btns">
+      <button class="lgpd-btn-recuse" onclick="hideLGPD()">Recusar</button>
+      <button class="lgpd-btn-accept" onclick="acceptLGPD()">Aceitar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// HEADER SCROLL EFFECT
+window.addEventListener('scroll', function() {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// SIMULADOR
+var tipoAtual = 'residencial';
+
+function setTipo(btn) {
+  document.querySelectorAll('.tipo-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  tipoAtual = btn.getAttribute('data-tipo');
+}
+
+function atualizarConta(val) {
+  var v = parseInt(val);
+  document.getElementById('contaValue').textContent = 'R$ ' + v;
+  var mensal = Math.round(v * 0.9);
+  var anual = mensal * 12;
+  var kwp = Math.max(1, Math.round((v / 130) * 10) / 10);
+  document.getElementById('economiaMensal').textContent = 'R$ ' + mensal.toLocaleString('pt-BR');
+  document.getElementById('economiaDetalhe').textContent = 'R$ ' + anual.toLocaleString('pt-BR') + '/ano · sistema de ~' + kwp + ' kWp';
+}
+
+function enviarWhatsApp(e) {
+  e.preventDefault();
+  var nome = document.getElementById('nome').value;
+  var telefone = document.getElementById('telefone').value;
+  var cidade = document.getElementById('cidade').value;
+  var conta = parseInt(document.getElementById('contaRange').value);
+  var mensal = Math.round(conta * 0.9);
+  var anual = mensal * 12;
+  var kwp = Math.max(1, Math.round((conta / 130) * 10) / 10);
+  var msg = encodeURIComponent(
+    'Olá, VR Soluções Energéticas! Quero uma proposta de energia solar.\n\n' +
+    '*Nome:* ' + nome + '\n' +
+    '*Telefone:* ' + telefone + '\n' +
+    '*Cidade:* ' + cidade + '\n' +
+    '*Tipo de imóvel:* ' + tipoAtual + '\n' +
+    '*Conta média mensal:* R$ ' + conta + '\n' +
+    '*Economia estimada:* R$ ' + mensal + '/mês (R$ ' + anual + '/ano)\n' +
+    '*Sistema sugerido:* ~' + kwp + ' kWp'
+  );
+  window.open('https://wa.me/5515988294431?text=' + msg, '_blank');
+}
+
+// FAQ ACCORDION
+function toggleFAQ(btn) {
+  var icon = btn.querySelector('.faq-icon');
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.style.display !== 'none';
+  document.querySelectorAll('.faq-answer').forEach(function(a) { a.style.display = 'none'; });
+  document.querySelectorAll('.faq-icon').forEach(function(i) { i.classList.remove('open'); });
+  if (!isOpen) {
+    answer.style.display = 'block';
+    icon.classList.add('open');
+  }
+}
+
+// LGPD COOKIE BANNER
+if (!localStorage.getItem('vr-lgpd-accepted')) {
+  document.getElementById('lgpd').classList.add('visible');
+}
+
+function hideLGPD() {
+  document.getElementById('lgpd').classList.remove('visible');
+}
+
+function acceptLGPD() {
+  localStorage.setItem('vr-lgpd-accepted', '1');
+  document.getElementById('lgpd').classList.remove('visible');
+}
+</script>
+</body>
+</html>

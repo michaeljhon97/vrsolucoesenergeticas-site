@@ -1,0 +1,279 @@
+{
+  "version": "0.4",
+  "title": "Footer - VR Solu\u00e7\u00f5es Energ\u00e9ticas",
+  "type": "footer",
+  "content": [
+    {
+      "id": "f1o2o3t4",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "background_background": "classic",
+        "background_color": "#0B1420",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "f5o6o7t8",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "width": { "unit": "%", "size": 100, "max": 1280 },
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "gap": { "unit": "px", "column": "32", "row": "32", "isLinked": false },
+            "padding": { "unit": "px", "top": "56", "right": "24", "bottom": "56", "left": "24", "isLinked": false },
+            "padding_tablet": { "unit": "px", "top": "40", "right": "20", "bottom": "40", "left": "20", "isLinked": false },
+            "padding_mobile": { "unit": "px", "top": "32", "right": "16", "bottom": "32", "left": "16", "isLinked": false }
+          },
+          "elements": [
+            {
+              "id": "f9o0o1t2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "width": { "unit": "%", "size": 42 },
+                "width_tablet": { "unit": "%", "size": 100 },
+                "width_mobile": { "unit": "%", "size": 100 },
+                "flex_direction": "column",
+                "gap": { "unit": "px", "column": "0", "row": "16", "isLinked": false }
+              },
+              "elements": [
+                {
+                  "id": "b3c4d5e6",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_direction": "row",
+                    "flex_align_items": "center",
+                    "gap": { "unit": "px", "column": "12", "row": "0", "isLinked": false }
+                  },
+                  "elements": [
+                    {
+                      "id": "f7g8h9i0",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "isInner": false,
+                      "settings": {
+                        "image": { "url": "https://placehold.co/48x48/162447/D4A843?text=VR", "id": "", "size": "", "alt": "VR Solu\u00e7\u00f5es Energ\u00e9ticas logo", "source": "external" },
+                        "width": { "unit": "px", "size": 48 },
+                        "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                        "image_size": "full"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "j1k2l3m4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<div style=\"line-height: 1.2;\"><strong style=\"font-family: Sora; font-weight: 700; color: #fff; font-size: 16px;\">VR Solu\u00e7\u00f5es</strong><br><span style=\"color: #D4A843; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;\">Energ\u00e9ticas</span></div>",
+                        "typography_typography": "custom"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "n5o6p7q8",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<p>Especialistas em energia solar fotovoltaica. Projeto, instala\u00e7\u00e3o e homologa\u00e7\u00e3o com garantia para resid\u00eancias, empresas e propriedades rurais.</p>",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 14 },
+                    "typography_line_height": { "unit": "em", "size": 1.7 },
+                    "text_color": "rgba(255,255,255,0.65)",
+                    "width": { "unit": "%", "size": 90 }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "r9s0t1u2",
+                  "elType": "widget",
+                  "widgetType": "social-icons",
+                  "isInner": false,
+                  "settings": {
+                    "icon_list": [
+                      { "_id": "soc_i1", "social": "fab fa-instagram", "link": { "url": "https://www.instagram.com/vrsolucoesenergeticas", "is_external": true } },
+                      { "_id": "soc_i2", "social": "fab fa-whatsapp", "link": { "url": "https://wa.me/5519995232840", "is_external": true } }
+                    ],
+                    "icon_color": "#D4A843",
+                    "icon_color_hover": "#FFFFFF",
+                    "icon_size": { "unit": "px", "size": 18 },
+                    "icon_padding": { "unit": "em", "size": 0.5 },
+                    "icon_spacing": { "unit": "px", "size": 8 },
+                    "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "v3w4x5y6",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "width": { "unit": "%", "size": 25 },
+                "width_tablet": { "unit": "%", "size": 47 },
+                "width_mobile": { "unit": "%", "size": 100 },
+                "flex_direction": "column",
+                "gap": { "unit": "px", "column": "0", "row": "16", "isLinked": false }
+              },
+              "elements": [
+                {
+                  "id": "z7a8b9c0",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Navega\u00e7\u00e3o",
+                    "header_size": "h5",
+                    "align": "left",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 13 },
+                    "typography_font_weight": "700",
+                    "typography_letter_spacing": { "unit": "px", "size": 1 },
+                    "typography_text_transform": "uppercase",
+                    "text_color": "#D4A843"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "d1e2f3g4",
+                  "elType": "widget",
+                  "widgetType": "icon-list",
+                  "isInner": false,
+                  "settings": {
+                    "icon_list": [
+                      { "_id": "nav_f1", "text": "Benef\u00edcios", "link": { "url": "#beneficios" }, "icon": "fas fa-chevron-right", "icon_color": "#D4A843" },
+                      { "_id": "nav_f2", "text": "Servi\u00e7os", "link": { "url": "#servicos" }, "icon": "fas fa-chevron-right", "icon_color": "#D4A843" },
+                      { "_id": "nav_f3", "text": "Projetos", "link": { "url": "#galeria" }, "icon": "fas fa-chevron-right", "icon_color": "#D4A843" },
+                      { "_id": "nav_f4", "text": "Avalia\u00e7\u00f5es", "link": { "url": "#avaliacoes" }, "icon": "fas fa-chevron-right", "icon_color": "#D4A843" }
+                    ],
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 14 },
+                    "text_color": "rgba(255,255,255,0.7)",
+                    "text_color_hover": "#D4A843",
+                    "icon_size": { "unit": "px", "size": 10 },
+                    "space_between": { "unit": "px", "size": 12 }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "h5i6j7k8",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "width": { "unit": "%", "size": 25 },
+                "width_tablet": { "unit": "%", "size": 47 },
+                "width_mobile": { "unit": "%", "size": 100 },
+                "flex_direction": "column",
+                "gap": { "unit": "px", "column": "0", "row": "16", "isLinked": false }
+              },
+              "elements": [
+                {
+                  "id": "l9m0n1o2",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Contato",
+                    "header_size": "h5",
+                    "align": "left",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 13 },
+                    "typography_font_weight": "700",
+                    "typography_letter_spacing": { "unit": "px", "size": 1 },
+                    "typography_text_transform": "uppercase",
+                    "text_color": "#D4A843"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "p3q4r5s6",
+                  "elType": "widget",
+                  "widgetType": "icon-list",
+                  "isInner": false,
+                  "settings": {
+                    "icon_list": [
+                      { "_id": "con_f1", "text": "WhatsApp: (19) 99523-2840", "link": { "url": "https://wa.me/5519995232840", "is_external": true }, "icon": "fab fa-whatsapp", "icon_color": "#25D366" },
+                      { "_id": "con_f2", "text": "@vrsolucoesenergeticas", "link": { "url": "https://www.instagram.com/vrsolucoesenergeticas", "is_external": true }, "icon": "fab fa-instagram", "icon_color": "#D4A843" }
+                    ],
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 14 },
+                    "text_color": "rgba(255,255,255,0.7)",
+                    "text_color_hover": "#D4A843",
+                    "icon_size": { "unit": "px", "size": 14 },
+                    "space_between": { "unit": "px", "size": 12 }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t7u8v9w0",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "width": { "unit": "%", "size": 100, "max": 1280 },
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "flex_wrap": "wrap",
+            "gap": { "unit": "px", "column": "16", "row": "8", "isLinked": false },
+            "border_border": "solid",
+            "border_width": { "unit": "px", "top": "1", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+            "border_color": "rgba(255,255,255,0.08)",
+            "padding": { "unit": "px", "top": "20", "right": "24", "bottom": "20", "left": "24", "isLinked": false },
+            "padding_tablet": { "unit": "px", "top": "16", "right": "20", "bottom": "16", "left": "20", "isLinked": false },
+            "padding_mobile": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": false }
+          },
+          "elements": [
+            {
+              "id": "x1y2z3a4",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<span style=\"color: rgba(255,255,255,0.45); font-size: 12px;\">\u00A9 VR Solu\u00e7\u00f5es Energ\u00e9ticas. Todos os direitos reservados.</span>",
+                "typography_typography": "custom",
+                "typography_font_size": { "unit": "px", "size": 12 }
+              },
+              "elements": []
+            },
+            {
+              "id": "b5c6d7e8",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<span style=\"color: rgba(255,255,255,0.45); font-size: 12px;\">CNPJ em conformidade \u00B7 LGPD</span>",
+                "typography_typography": "custom",
+                "typography_font_size": { "unit": "px", "size": 12 }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {},
+  "settings": {}
+}

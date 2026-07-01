@@ -1,0 +1,442 @@
+{
+  "version": "0.4",
+  "title": "Hero - VR Solu\u00e7\u00f5es Energ\u00e9ticas",
+  "type": "page",
+  "content": [
+    {
+      "id": "a1b2c3d4",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#0B1420",
+        "padding": { "unit": "px", "top": "120", "right": "20", "bottom": "80", "left": "20", "isLinked": false },
+        "padding_tablet": { "unit": "px", "top": "100", "right": "20", "bottom": "60", "left": "20", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "90", "right": "16", "bottom": "50", "left": "16", "isLinked": false },
+        "z_index": 1,
+        "min_height": { "unit": "vh", "size": 90 },
+        "overflow": "hidden"
+      },
+      "elements": [
+        {
+          "id": "e5f6g7h8",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "width": { "unit": "%", "size": 100, "max": 1280 },
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "flex_align_items": "center",
+            "gap": { "unit": "px", "column": "60", "row": "40", "isLinked": false },
+            "gap_tablet": { "unit": "px", "column": "40", "row": "40", "isLinked": false },
+            "gap_mobile": { "unit": "px", "column": "30", "row": "30", "isLinked": false },
+            "position": "relative",
+            "z_index": 2
+          },
+          "elements": [
+            {
+              "id": "i9j0k1l2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "width": { "unit": "%", "size": 52 },
+                "width_tablet": { "unit": "%", "size": 100 },
+                "width_mobile": { "unit": "%", "size": 100 },
+                "flex_direction": "column",
+                "flex_align_items": "flex-start",
+                "gap": { "unit": "px", "column": "0", "row": "16", "isLinked": false }
+              },
+              "elements": [
+                {
+                  "id": "m3n4o5p6",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "text": "Atendemos todo o Brasil",
+                    "button_size": "xs",
+                    "button_border_radius": { "unit": "px", "top": "100", "right": "100", "bottom": "100", "left": "100", "isLinked": true },
+                    "button_text_color": "#FFFFFF",
+                    "button_background_color": "rgba(255,255,255,0.08)",
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "border_color": "rgba(255,255,255,0.15)",
+                    "button_padding": { "unit": "px", "top": "6", "right": "14", "bottom": "6", "left": "14", "isLinked": false },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 12 },
+                    "typography_font_weight": "500",
+                    "typography_letter_spacing": { "unit": "px", "size": 0.3 }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "q7r8s9t0",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Reduza at\u00e9 <span style=\"color: #D4A843;\">95%</span> da sua conta de luz com energia solar.",
+                    "header_size": "h1",
+                    "align": "left",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Sora",
+                    "typography_font_size": { "unit": "px", "size": 56 },
+                    "typography_font_size_tablet": { "unit": "px", "size": 40 },
+                    "typography_font_size_mobile": { "unit": "px", "size": 32 },
+                    "typography_font_weight": "800",
+                    "typography_line_height": { "unit": "em", "size": 1.05 },
+                    "typography_letter_spacing": { "unit": "px", "size": -1.5 },
+                    "text_color": "#FFFFFF",
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": false }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "u1v2w3x4",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<p>Simule gr\u00e1tis em 30 segundos e receba uma proposta personalizada direto no seu WhatsApp. Projeto, instala\u00e7\u00e3o e homologa\u00e7\u00e3o com garantia.</p>",
+                    "align": "left",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 18 },
+                    "typography_font_size_tablet": { "unit": "px", "size": 16 },
+                    "typography_font_size_mobile": { "unit": "px", "size": 15 },
+                    "typography_font_weight": "400",
+                    "typography_line_height": { "unit": "em", "size": 1.6 },
+                    "text_color": "rgba(255,255,255,0.75)",
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": false }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "y5z6a7b8",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_direction": "row",
+                    "flex_wrap": "wrap",
+                    "gap": { "unit": "px", "column": "24", "row": "8", "isLinked": false },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": false }
+                  },
+                  "elements": [
+                    {
+                      "id": "c9d0e1f2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<strong style=\"color: #D4A843; font-size: 18px;\">+500</strong> <span style=\"color: rgba(255,255,255,0.65); font-size: 14px;\">instala\u00e7\u00f5es</span>",
+                        "inline": true,
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "g3h4i5j6",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<strong style=\"color: #D4A843; font-size: 18px;\">25 anos</strong> <span style=\"color: rgba(255,255,255,0.65); font-size: 14px;\">de garantia</span>",
+                        "inline": true,
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "k7l8m9n0",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<strong style=\"color: #D4A843; font-size: 18px;\">4.9\u2605</strong> <span style=\"color: rgba(255,255,255,0.65); font-size: 14px;\">no Google</span>",
+                        "inline": true,
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "o1p2q3r4",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "isInner": false,
+                  "settings": {
+                    "image": { "url": "https://placehold.co/1200x675/0B1420/D4A843?text=Pain%C3%A9is+Solares", "id": "", "size": "", "alt": "Casa moderna com pain\u00e9is solares ao p\u00f4r do sol", "source": "external" },
+                    "width": { "unit": "%", "size": 100 },
+                    "image_size": "full",
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "border_color": "rgba(255,255,255,0.08)",
+                    "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": { "horizontal": 0, "vertical": 20, "blur": 60, "spread": -20, "color": "rgba(212,168,67,0.25)" },
+                    "hide_desktop": false,
+                    "hide_tablet": false,
+                    "hide_mobile": false,
+                    "margin": { "unit": "px", "top": "24", "right": "0", "bottom": "0", "left": "0", "isLinked": false }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "s5t6u7v8",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "width": { "unit": "%", "size": 42 },
+                "width_tablet": { "unit": "%", "size": 100 },
+                "width_mobile": { "unit": "%", "size": 100 },
+                "flex_direction": "column",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_radius": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": { "horizontal": 0, "vertical": 10, "blur": 40, "spread": -10, "color": "rgba(11,20,32,0.15)" },
+                "padding": { "unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": false },
+                "padding_tablet": { "unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": false },
+                "padding_mobile": { "unit": "px", "top": "24", "right": "20", "bottom": "24", "left": "20", "isLinked": false },
+                "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": false }
+              },
+              "elements": [
+                {
+                  "id": "w9x0y1z2",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_direction": "row",
+                    "flex_align_items": "center",
+                    "gap": { "unit": "px", "column": "8", "row": "0", "isLinked": false }
+                  },
+                  "elements": [
+                    {
+                      "id": "a3b4c5d6",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Descubra sua economia",
+                        "header_size": "h3",
+                        "align": "left",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Sora",
+                        "typography_font_size": { "unit": "px", "size": 28 },
+                        "typography_font_size_mobile": { "unit": "px", "size": 24 },
+                        "typography_font_weight": "700",
+                        "text_color": "#0B1420",
+                        "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                        "gap": { "unit": "px", "column": "0", "row": "0", "isLinked": true }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "e7f8g9h0",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<p>Preencha em 30 segundos e receba sua proposta no WhatsApp.</p>",
+                    "align": "left",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 14 },
+                    "text_color": "#7A7F99",
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "i1j2k3l4",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<div style=\"display: flex; align-items: center; gap: 8px; margin-bottom: 12px;\"><span style=\"display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #D4A843;\"></span><span style=\"color: #D4A843; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;\">Simulador gr\u00e1tis</span></div>",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 11 }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "l5m6n7o8",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<label style=\"font-size: 11px; font-weight: 700; color: #0B1420; text-transform: uppercase; letter-spacing: 0.5px;\">Tipo de im\u00f3vel</label><div style=\"display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px;\"><div style=\"padding: 10px; border-radius: 12px; background: #162447; color: #fff; font-size: 13px; font-weight: 500; text-align: center;\">Residencial</div><div style=\"padding: 10px; border-radius: 12px; background: #F4F4F6; color: #0B1420; font-size: 13px; font-weight: 500; text-align: center;\">Comercial</div><div style=\"padding: 10px; border-radius: 12px; background: #F4F4F6; color: #0B1420; font-size: 13px; font-weight: 500; text-align: center;\">Rural</div></div>",
+                    "typography_typography": "custom",
+                    "typography_font_size": { "unit": "px", "size": 13 },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "20", "left": "0", "isLinked": false }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "p9q0r1s2",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<label style=\"display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; color: #0B1420; text-transform: uppercase; letter-spacing: 0.5px;\"><span>Conta de luz m\u00e9dia mensal</span><span style=\"color: #D4A843; font-weight: 700; text-transform: none; font-size: 16px;\">R$ 500</span></label>",
+                    "typography_typography": "custom",
+                    "typography_font_size": { "unit": "px", "size": 11 },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "4", "left": "0", "isLinked": false }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "t3u4v5w6",
+                  "elType": "widget",
+                  "widgetType": "shortcode",
+                  "isInner": false,
+                  "settings": {
+                    "shortcode": "[contact-form-7 id=\"simulador-slider\" title=\"Slider Conta\"]",
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "20", "left": "0", "isLinked": false }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "x7y8z9a0",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_direction": "column",
+                    "background_background": "gradient",
+                    "background_gradient_type": "linear",
+                    "background_color": "#0B1420",
+                    "background_color_b": "#162447",
+                    "background_gradient_angle": { "unit": "deg", "size": 135 },
+                    "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                    "padding": { "unit": "px", "top": "20", "right": "20", "bottom": "20", "left": "20", "isLinked": true },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false }
+                  },
+                  "elements": [
+                    {
+                      "id": "b1c2d3e4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<div style=\"color: #D4A843; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;\">Sua economia estimada</div><div style=\"margin-top: 4px; display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-family: Sora; font-size: 36px; font-weight: 800; color: #fff;\">R$ 450</span><span style=\"color: rgba(255,255,255,0.65); font-size: 14px;\">/m\u00eas</span></div><div style=\"margin-top: 4px; color: rgba(255,255,255,0.75); font-size: 14px;\">R$ 5.400/ano \u00b7 sistema de ~3.5 kWp</div>",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "f5g6h7i8",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_direction": "row",
+                    "flex_wrap": "wrap",
+                    "gap": { "unit": "px", "column": "12", "row": "12", "isLinked": false },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "12", "left": "0", "isLinked": false }
+                  },
+                  "elements": [
+                    {
+                      "id": "j9k0l1m2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<input placeholder=\"Nome\" style=\"width: 100%; padding: 10px 16px; border-radius: 12px; border: 1px solid #EBEBF0; font-size: 14px; background: #fff; box-sizing: border-box;\" />",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 },
+                        "width": { "unit": "%", "size": 48 },
+                        "width_tablet": { "unit": "%", "size": 100 },
+                        "width_mobile": { "unit": "%", "size": 100 }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "n3o4p5q6",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<input placeholder=\"WhatsApp\" style=\"width: 100%; padding: 10px 16px; border-radius: 12px; border: 1px solid #EBEBF0; font-size: 14px; background: #fff; box-sizing: border-box;\" />",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 },
+                        "width": { "unit": "%", "size": 48 },
+                        "width_tablet": { "unit": "%", "size": 100 },
+                        "width_mobile": { "unit": "%", "size": 100 }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "r7s8t9u0",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "text": "Receber proposta no WhatsApp",
+                    "button_size": "lg",
+                    "button_border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                    "button_text_color": "#0B1420",
+                    "button_background_color": "#D4A843",
+                    "button_hover_text_color": "#0B1420",
+                    "button_hover_background_color": "#C8962E",
+                    "button_width": { "unit": "%", "size": 100 },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 16 },
+                    "typography_font_weight": "700",
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": { "horizontal": 0, "vertical": 8, "blur": 24, "spread": -8, "color": "rgba(212,168,67,0.4)" },
+                    "padding": { "unit": "px", "top": "14", "right": "24", "bottom": "14", "left": "24", "isLinked": false },
+                    "hover_animation": "grow",
+                    "link": { "url": "https://wa.me/5519995232840?text=Ol%C3%A1!%20Quero%20uma%20proposta%20de%20energia%20solar.", "is_external": true, "nofollow": true }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "v1w2x3y4",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<p style=\"font-size: 11px; color: #7A7F99; text-align: center; margin: 0;\">Ao enviar voc\u00ea concorda em ser contatado pela VR Solu\u00e7\u00f5es Energ\u00e9ticas conforme a LGPD.</p>",
+                    "align": "center",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 11 },
+                    "text_color": "#7A7F99"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {},
+  "settings": {}
+}
