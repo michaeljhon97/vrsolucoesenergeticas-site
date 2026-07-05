@@ -110,7 +110,8 @@ img { max-width: 100%; display: block; }
 .stat-label { color: rgba(255,255,255,.7); }
 .hero-img-desktop { display: none; }
 @media (min-width: 1024px) { .hero-img-desktop { display: block; margin-top: 2rem; } }
-.hero-img-desktop img, .hero-img-mobile img {
+.hero-img-desktop img, .hero-img-mobile img,
+.hero-img-desktop video, .hero-img-mobile video {
   border-radius: 1rem; box-shadow: 0 0 30px rgba(212,168,67,.2);
   border: 1px solid rgba(255,255,255,.1); width: 100%;
 }
