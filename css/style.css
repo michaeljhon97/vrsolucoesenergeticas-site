@@ -109,13 +109,12 @@ img { max-width: 100%; display: block; }
 .stat-value { font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; color: var(--gold); }
 .stat-label { color: rgba(255,255,255,.7); }
 .hero-img-desktop { display: none; }
-@media (min-width: 1024px) { .hero-img-desktop { display: block; margin-top: 2rem; } }
+@media (min-width: 1024px) { .hero-img-desktop { display: block; } }
 .hero-img-desktop img, .hero-img-mobile img,
 .hero-img-desktop video, .hero-img-mobile video {
   border-radius: 1rem;
   border: 1px solid rgba(11,20,32,0.3); width: 100%;
   max-width: 720px; max-height: 720px; display: block; margin: 0 auto;
-  background: var(--navy-deep);
 }
 .hero-img-mobile { margin-top: 2.5rem; padding: 0 1rem; }
 @media (min-width: 1024px) { .hero-img-mobile { display: none; } }
