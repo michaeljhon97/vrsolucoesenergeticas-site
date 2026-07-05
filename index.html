@@ -187,16 +187,15 @@
       </div>
     </div>
     <div class="galeria-grid">
-      <div class="galeria-item span-2"><img src="galeria/02.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" /></div>
-      <div class="galeria-item"><img src="galeria/03.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" /></div>
-      <div class="galeria-item"><img src="galeria/04.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" /></div>
-      <div class="galeria-item"><img src="galeria/05.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" /></div>
-      <div class="galeria-item span-2"><img src="galeria/06.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" /></div>
-      <div class="galeria-item"><img src="galeria/07.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" /></div>
-      <div class="galeria-item"><img src="galeria/08.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" /></div>
-      <div class="galeria-item"><img src="galeria/09.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" /></div>
-      <div class="galeria-item span-2"><img src="galeria/10.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" /></div>
-      <div class="galeria-item"><img src="galeria/12.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" /></div>
+      <div class="galeria-item"><img src="galeria/02.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" onclick="openLightbox(this.src)" /></div>
+      <div class="galeria-item"><img src="galeria/03.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" onclick="openLightbox(this.src)" /></div>
+      <div class="galeria-item"><img src="galeria/04.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" onclick="openLightbox(this.src)" /></div>
+      <div class="galeria-item"><img src="galeria/05.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" onclick="openLightbox(this.src)" /></div>
+      <div class="galeria-item"><img src="galeria/06.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" onclick="openLightbox(this.src)" /></div>
+      <div class="galeria-item"><img src="galeria/07.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" onclick="openLightbox(this.src)" /></div>
+      <div class="galeria-item"><img src="galeria/08.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" onclick="openLightbox(this.src)" /></div>
+      <div class="galeria-item"><img src="galeria/09.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" onclick="openLightbox(this.src)" /></div>
+      <div class="galeria-item"><img src="galeria/10.jpeg" alt="Instalação solar" loading="lazy" width="1024" height="1024" onclick="openLightbox(this.src)" /></div>
     </div>
   </div>
 </section>
@@ -414,6 +413,11 @@
       <button class="lgpd-btn-accept" onclick="acceptLGPD()">Aceitar</button>
     </div>
   </div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="" alt="" />
 </div>
 
 <script src="js/script.js"></script>
