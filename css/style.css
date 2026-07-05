@@ -293,6 +293,9 @@ section { padding: 4rem 0; }
 .instagram-section h2 span { color: var(--gold); }
 .instagram-section p { margin-top: .5rem; color: var(--text-light); margin-bottom: 2rem; }
 .instagram-section .sk-instagram-feed { max-width: 800px; margin: 0 auto; }
+.instagram-section .sk-branding,
+.instagram-section a[href*="sociablekit"],
+.instagram-section a[href*="sociablekit"] * { display: none !important; }
 
 .cta-final {
   padding: 5rem 0; background: var(--navy-deep); position: relative; overflow: hidden;
