@@ -335,6 +335,19 @@
     <p>Acompanhe nossos projetos e novidades.</p>
     <div class="sk-instagram-feed" data-embed-id="25693814"></div>
     <script src="https://widgets.sociablekit.com/instagram-feed/widget.js" defer></script>
+    <script>
+    (function() {
+      var observer = new MutationObserver(function() {
+        var el = document.querySelector('.sk-instagram-feed a[href*="sociablekit"], .tutorial_link');
+        if (el) { el.style.display = 'none'; el.style.visibility = 'hidden'; }
+      });
+      observer.observe(document.querySelector('.sk-instagram-feed'), { childList: true, subtree: true, attributes: true });
+      setTimeout(function() {
+        var el = document.querySelector('.sk-instagram-feed a[href*="sociablekit"], .tutorial_link');
+        if (el) { el.style.display = 'none'; el.style.visibility = 'hidden'; }
+      }, 3000);
+    })();
+    </script>
   </div>
 </section>
 
