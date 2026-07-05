@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vrsolucoesenergeticas.com.br/sitemap.xml
